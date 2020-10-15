@@ -1,0 +1,30 @@
+{
+   "context": "client",
+   "identifier": "com.dreadnought.icarusCombatSelect-dev",
+   "display_name": "Icarus Combat Select",
+   "description": "Lets you select the Icarus unit alongside other combat units.",
+   "author": "Dreadnought",
+   "version": "1.0 dev",
+   "build": "114880",
+   "date": "2020/9/5",
+   "signature": " meh ",
+   "forum": " ",
+   "category": ["ui", "classic", "titans"],
+   "priority": 100,
+   "icon": "https://i.imgur.com/eHPf2t4.png ",
+   "category": ["unit"],
+    "titansOnly": true,
+    "classicOnly": false,
+    "classic": false,
+    "titans": true,
+	"searchable": [
+        "combat",
+        "icarus",
+        "group",
+        "deselect",
+		"select",
+        "in-game",
+        "explosion",
+        "dreadnought"
+    ]
+ }
