@@ -1,6 +1,7 @@
 {
    "context": "client",
    "identifier": "com.pa.dreadnought.icarus_combat_select",
+   "identifier": "com.pa.dreadnought.icarus_combat_select-dev",
    "display_name": "Icarus Combat Select",
    "description": "Lets you select the Icarus unit alongside other combat units. ",
    "author": "Dreadnought",
@@ -10,7 +11,7 @@
    "signature": "Dreadnought",
    "forum": "https://forums.planetaryannihilation.com/threads/client-rel-icarus-combat-select.73515/",
    "category": ["ui", "classic", "titans"],
-   "priority": 100,
+   "priority": 90,
    "icon": "https://i.imgur.com/eHPf2t4.png ",
    "category": ["unit"],
     "titansOnly": true,
