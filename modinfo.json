@@ -9,7 +9,7 @@
    "date": "2023-10-06",
    "signature": "Dreadnought",
    "forum": "https://forums.planetaryannihilation.com/threads/client-rel-icarus-combat-select.73515/",
-   "category": ["ui", "classic", "titans", "unit"],
+   "category": ["ui", "titans", "unit"],
    "priority": 90,
    "icon": "https://i.imgur.com/eHPf2t4.png ",
     "titansOnly": true,
