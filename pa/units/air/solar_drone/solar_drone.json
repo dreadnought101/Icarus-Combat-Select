@@ -1,14 +1,30 @@
 {
+    "base_spec": "/pa/units/air/base_flyer/base_flyer.json",
     "display_name": "Icarus",
     "description": "!LOC:Solar Drone - Produces energy. Mobile but slow. Weak. Attacks land, air, and sea targets.",
-    "TEMP_texelinfo": 10.4837,
+    "max_health": 40,
+    "build_metal_cost": 125,
+    "usable": true,
     "attachable": {
         "offsets": {
-            "root": [
-                0,
-                0,
-                0
-            ]
+            "root": [0, 0, 0]
+        }
+    },
+    "production": {
+        "energy": 175
+    },
+    "unit_types": ["UNITTYPE_Custom58", "UNITTYPE_Air", "UNITTYPE_EnergyProduction", "UNITTYPE_Mobile", "UNITTYPE_Basic", "UNITTYPE_FactoryBuild", "UNITTYPE_Economy","UNITTYPE_Offense"],
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/air"
+        },
+        "fired": {
+            "audio_cue": "/SE/Weapons/air/solar_drone_fire",
+            "effect_spec": "/pa/units/air/solar_drone/solar_drone_muzzle_flash.pfx bone_leftWing01 /pa/units/air/solar_drone/solar_drone_muzzle_flash.pfx bone_rightWing01"
+        },
+        "died": {
+            "audio_cue": "/SE/Death/Air",
+            "effect_scale": 0.8
         }
     },
     "audio": {
@@ -23,76 +39,6 @@
         "selection_response": {
             "cue": "/SE/Selection/air/transport"
         }
-    },
-    "base_spec": "/pa/units/air/base_flyer/base_flyer.json",
-    "build_metal_cost": 125,
-    "events": {
-        "build_complete": {
-            "audio_cue": "/SE/Build_Complete/air"
-        },
-        "fired": {
-            "audio_cue": "/SE/Weapons/air/solar_drone_fire",
-            "effect_spec": "/pa/units/air/solar_drone/solar_drone_muzzle_flash.pfx bone_leftWing01 /pa/units/air/solar_drone/solar_drone_muzzle_flash.pfx bone_rightWing01"
-        },
-        "died": {
-            "audio_cue": "/SE/Death/Air",
-            "effect_scale": 0.8
-        }
-    },
-    "fx_offsets": [{
-            "type": "idle",
-            "filename": "/pa/effects/specs/solar_drone_idle.pfx",
-            "bone": "bone_root",
-            "offset": [
-                0,
-                0,
-                0
-            ]
-        }, {
-            "type": "idle",
-            "filename": "/pa/effects/specs/solar_drone_jets.pfx",
-            "bone": "bone_rightThruster",
-            "offset": [
-                0.578,
-                0.0,
-                0.0
-            ],
-            "orientation": [
-                0,
-                180,
-                0
-            ]
-        }, {
-            "type": "idle",
-            "filename": "/pa/effects/specs/solar_drone_jets.pfx",
-            "bone": "bone_leftThruster",
-            "offset": [
-                -0.578,
-                0.0,
-                0.0
-            ],
-            "orientation": [
-                180,
-                0,
-                0
-            ]
-        }
-    ],
-    "max_health": 40,
-    "mesh_bounds": [
-        15.5,
-        8.5,
-        3.5
-    ],
-    "model": {
-        "filename": "/pa/units/air/solar_drone/solar_drone.papa",
-        "animations": {
-            "fly": "/pa/units/air/solar_drone/solar_drone_anim_fly.papa",
-            "building": "/pa/units/air/solar_drone/solar_drone_anim_building.papa",
-            "deploy": "/pa/units/air/solar_drone/solar_drone_anim_deploy.papa",
-            "idle": "/pa/units/air/solar_drone/solar_drone_anim_idle.papa"
-        },
-        "animtree": "/pa/anim/anim_trees/solar_drone_anim_tree.json"
     },
     "navigation": {
         "type": "air",
@@ -111,9 +57,6 @@
         "radius": 5,
         "gravity_scalar": 0.001
     },
-    "production": {
-        "energy": 175
-    },
     "recon": {
         "observer": {
             "items": [{
@@ -130,27 +73,44 @@
             ]
         }
     },
-    "selection_icon": {
-        "diameter": 21.0
+    "model": {
+        "filename": "/pa/units/air/solar_drone/solar_drone.papa",
+        "animations": {
+            "fly": "/pa/units/air/solar_drone/solar_drone_anim_fly.papa",
+            "building": "/pa/units/air/solar_drone/solar_drone_anim_building.papa",
+            "deploy": "/pa/units/air/solar_drone/solar_drone_anim_deploy.papa",
+            "idle": "/pa/units/air/solar_drone/solar_drone_anim_idle.papa"
+        },
+        "animtree": "/pa/anim/anim_trees/solar_drone_anim_tree.json"
     },
     "tools": [{
             "spec_id": "/pa/units/air/solar_drone/solar_drone_tool_weapon.json",
             "aim_bone": "bone_root",
-            "muzzle_bone": [
-                "bone_leftWing01",
-                "bone_rightWing01"
-            ]
+            "muzzle_bone": ["bone_leftWing01", "bone_rightWing01"]
         }
     ],
-    "unit_types": [
-        "UNITTYPE_Custom58",
-        "UNITTYPE_Air",
-        "UNITTYPE_EnergyProduction",
-        "UNITTYPE_Mobile",
-        "UNITTYPE_Basic",
-        "UNITTYPE_FactoryBuild",
-        "UNITTYPE_Economy",
-        "UNITTYPE_Offense"
+    "TEMP_texelinfo": 10.4837,
+    "fx_offsets": [{
+            "type": "idle",
+            "filename": "/pa/effects/specs/solar_drone_idle.pfx",
+            "bone": "bone_root",
+            "offset": [0, 0, 0]
+        }, {
+            "type": "idle",
+            "filename": "/pa/effects/specs/solar_drone_jets.pfx",
+            "bone": "bone_rightThruster",
+            "offset": [0.578, 0.0, 0.0],
+            "orientation": [0, 180, 0]
+        }, {
+            "type": "idle",
+            "filename": "/pa/effects/specs/solar_drone_jets.pfx",
+            "bone": "bone_leftThruster",
+            "offset": [-0.578, 0.0, 0.0],
+            "orientation": [180, 0, 0]
+        }
     ],
-    "usable": true
+    "selection_icon": {
+        "diameter": 21.0
+    },
+    "mesh_bounds": [15.5, 8.5, 3.5]
 }

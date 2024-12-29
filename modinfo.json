@@ -10,7 +10,7 @@
    "signature": "Dreadnought",
    "forum": "https://forums.planetaryannihilation.com/threads/client-rel-icarus-combat-select.73515/",
    "category": ["ui", "titans", "unit"],
-   "priority": 90,
+   "priority": 550,
    "icon": "https://i.imgur.com/eHPf2t4.png ",
     "titansOnly": true,
     "classicOnly": false,
